@@ -28,6 +28,8 @@ commit: 62138d79f0b348449d5fb1e7838f9958842f879b
 `starsd config chain-id stargaze-1`  
 `starsd init <MONIKER-NAME> --chain-id stargaze-1`  
 `curl -s  https://raw.githubusercontent.com/public-awesome/mainnet/main/stargaze-1/pre-genesis.json >~/.starsd/config/genesis.json`  
+`curl -s  https://raw.githubusercontent.com/public-awesome/mainnet/main/stargaze-1/genesis.tar.gz > genesis.tar.gz`  
+`tar -C ~/.starsd/config/ -xvf genesis.tar.gz`  
 # Running in production  
 `sudo nano /etc/systemd/system/starsd.service`  
 ```
