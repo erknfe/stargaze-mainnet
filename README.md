@@ -64,7 +64,7 @@ pruning-interval = "10
 ```
 indexer = "null"
 ```
-# Continue with restored db    
+# Restore updated db snapshot  
 `sudo systemctl stop starsd`  
 `cd .starsd`  
 `sudo mv data _data`  
