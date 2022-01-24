@@ -15,14 +15,14 @@ EOF
 # Build from source  
 `git clone https://github.com/public-awesome/stargaze`  
 `cd stargaze`  
-`git checkout v2.0.0`  
+`git checkout v1.0.0`  
 `make install`    
 `starsd version --long`  
 ```
 name: stargaze
 server_name: starsd
-version: 2.0.0
-commit: 62138d79f0b348449d5fb1e7838f9958842f879b
+version: 1.0.0
+commit: bee49997775a45f9f6383d6ba8c1dbc67439a6b6
 ```
 # Setup validator node  
 `starsd config chain-id stargaze-1`  
