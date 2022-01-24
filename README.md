@@ -64,15 +64,14 @@ pruning-interval = "10
 ```
 indexer = "null"
 ```
-# Continue with restored db  
+# Continue with restored db    
+`sudo systemctl stop starsd`  
 `cd .starsd`  
-`sudo apt install aria2`  
-`wget http://amsterdamstake.club/files/stargaze-data-29Dec20201-899044.torrent`  
-when the download status is 100%  
-`ctrl+c`  
-`sudo apt remove aria2`  
 `sudo mv data _data`  
-`sudo mv stargaze-data-29Dec20201-899044 data`  
+`mkdir -p data`  
+`cd data`  
+`SNAP_NAME=$(curl -s http://135.181.60.250:8086/stargaze/ | egrep -o ">stargaze.*tar" | tr -d ">")`  
+`wget -O - http://135.181.60.250:8086/stargaze/${SNAP_NAME} | tar xf -`  
 `sudo systemctl daemon-reload`  
 `sudo systemctl start starsd`  
 `curl -s localhost:26657/status | jq .result | jq .sync_info`  
