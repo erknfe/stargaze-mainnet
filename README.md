@@ -51,7 +51,7 @@ WantedBy=multi-user.target
 `starsd status`  
 `journalctl -u starsd -f`  
 `curl -s localhost:26657/status | jq .result | jq .sync_info`  
-# Use prunning data    
+# Use pruning data    
 `sudo systemctl stop starsd`  
 `sudo nano .starsd/config/app.toml`  
 ```
