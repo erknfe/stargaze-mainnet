@@ -39,19 +39,9 @@ WantedBy=multi-user.target
 `starsd status`  
 `journalctl -u starsd -f`  
 `curl -s localhost:26657/status | jq .result | jq .sync_info`  
-# Use pruning data    
+# Use pruning data  
 `sudo systemctl stop starsd`  
-`sudo nano .starsd/config/app.toml`  
-```
-pruning = "custom"
-pruning-keep-recent = "5"
-pruning-keep-every = "0"
-pruning-interval = "10
-```
-`sudo nano .starsd/config/config.toml`  
-```
-indexer = "null"
-```
+https://github.com/erknfe/Cosmos-Scripts/blob/main/pruning-data.md  
 # Restore updated db snapshot  
 `sudo systemctl stop starsd`  
 `cd .starsd`  
